@@ -1,6 +1,7 @@
 import { Input } from '@/components/Input'
 import { SettingsTab } from '@/components/SettingsTab'
 import { Mail } from 'lucide-react'
+import * as FileInput from '@/components/Form/FileInput'
 
 export default function Home() {
   return (
@@ -65,14 +66,18 @@ export default function Home() {
           <div className="grid grid-cols-form gap-6 pt-5">
             <label
               className="text-sm font-medium text-zinc-700"
-              htmlFor="yourPhoto"
+              htmlFor="photo"
             >
               Your photo
               <span className="font-regular mt-0.5 block text-zinc-500">
                 This will be displayed on your profile.
               </span>
             </label>
-            <div></div>
+            <FileInput.Root className="flex  items-start gap-5">
+              <FileInput.ImagePreview />
+              <FileInput.Trigger />
+              <FileInput.Controller />
+            </FileInput.Root>
           </div>
 
           <div className="grid grid-cols-form gap-6 pt-5">
@@ -124,7 +129,10 @@ export default function Home() {
                 Share a few snippets of your work.
               </span>
             </label>
-            <div></div>
+            <FileInput.Root>
+              <FileInput.Trigger />
+              <FileInput.Controller />
+            </FileInput.Root>
           </div>
 
           <div className="flex justify-end gap-3 pt-4">
