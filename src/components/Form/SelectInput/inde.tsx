@@ -28,7 +28,7 @@ export function SelectInput({
           side="bottom"
           position="popper"
           sideOffset={8}
-          className="z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white"
+          className="animate-slideDownAndFade z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white"
         >
           <Select.Viewport>{children}</Select.Viewport>
         </Select.Content>
