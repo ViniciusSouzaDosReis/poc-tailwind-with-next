@@ -16,7 +16,7 @@ export function SelectInput({
 }: SelectInputProps) {
   return (
     <Select.Root {...props}>
-      <Select.Trigger className="flex w-full justify-between rounded-lg border border-zinc-300 px-3 py-2 text-base shadow-sm outline-none data-[state=open]:border-violet-300 data-[placeholder]:text-zinc-500">
+      <Select.Trigger className="flex w-full justify-between rounded-lg border border-zinc-300 px-3 py-2 text-base shadow-sm outline-none focus:border-violet-300 focus:ring-4 focus:ring-violet-100  data-[placeholder]:text-zinc-500">
         <Select.Value placeholder={placeholder} />
         <Select.Icon>
           <ChevronDown className="h-5 w-5 text-gray-500" />
