@@ -4,14 +4,18 @@ import * as Select from '@radix-ui/react-select'
 import { ChevronDown } from 'lucide-react'
 import { ReactNode } from 'react'
 
-interface SelectInputProps {
+interface SelectInputProps extends Select.SelectProps {
   children: ReactNode
-  placeholder: string
+  placeholder?: string
 }
 
-export function SelectInput({ children, placeholder }: SelectInputProps) {
+export function SelectInput({
+  children,
+  placeholder,
+  ...props
+}: SelectInputProps) {
   return (
-    <Select.Root>
+    <Select.Root {...props}>
       <Select.Trigger className="flex w-full justify-between rounded-lg border border-zinc-300 px-3 py-2 text-base shadow-sm outline-none data-[state=open]:border-violet-300 data-[placeholder]:text-zinc-500">
         <Select.Value placeholder={placeholder} />
         <Select.Icon>
