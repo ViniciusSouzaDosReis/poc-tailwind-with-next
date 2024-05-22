@@ -11,7 +11,7 @@ import {
 type FileInputContextType = {
   id: string
   files: File[]
-  onFileChange: (files: File[]) => void
+  onFileChange: (files: File[], multiple: boolean) => void
 }
 
 const FileInputContext = createContext({} as FileInputContextType)
@@ -22,8 +22,16 @@ export function Root({ ...props }: RootProps) {
   const id = useId()
   const [files, setFiles] = useState<File[]>([])
 
+  function onFileChange(files: File[], multiple: boolean) {
+    if (multiple) {
+      setFiles((oldFiles) => [...oldFiles, ...files])
+    } else {
+      setFiles(files)
+    }
+  }
+
   return (
-    <FileInputContext.Provider value={{ id, files, onFileChange: setFiles }}>
+    <FileInputContext.Provider value={{ id, files, onFileChange }}>
       <div {...props} />
     </FileInputContext.Provider>
   )
