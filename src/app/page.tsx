@@ -5,6 +5,7 @@ import * as FileInput from '@/components/Form/FileInput'
 import { SelectInput } from '@/components/Form/SelectInput/inde'
 import { SelectItem } from '@/components/Form/SelectInput/SelectItem'
 import { Textarea } from '@/components/Form/Textarea'
+import { Button } from '@/components/Button'
 
 export default function Home() {
   return (
@@ -22,19 +23,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <button
-              type="button"
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm hover:bg-zinc-50"
-            >
+            <Button type="button" variant="outline">
               Cancel
-            </button>
-            <button
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
-              type="submit"
-              form="useForm"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="useForm">
               Save
-            </button>
+            </Button>
           </div>
         </div>
         <form
