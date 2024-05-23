@@ -5,7 +5,7 @@ import * as FileInput from '@/components/Form/FileInput'
 import { SelectInput } from '@/components/Form/SelectInput/inde'
 import { SelectItem } from '@/components/Form/SelectInput/SelectItem'
 import { Textarea } from '@/components/Form/Textarea'
-import { Button } from '@/components/Button'
+import { Button } from '@/components/Form/Button'
 
 export default function Home() {
   return (
